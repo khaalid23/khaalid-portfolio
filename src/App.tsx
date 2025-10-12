@@ -9,7 +9,10 @@ import Contact from './components/Contact';
 function App() {
   return (
     <>
-      <div className="relative z-10 bg-gradient-to-b from-indigo-900 via-indigo-700 to-indigo-500 text-white scroll-smooth min-h-screen">
+      {/* Full-screen animated background layer */}
+      <div className="fixed inset-0 -z-10 bg-animated" />
+
+      <div className="relative z-10 text-white scroll-smooth min-h-screen">
         
         <nav className="fixed w-full flex justify-center p-6 bg-transparent z-10">
           {['Home','About','Experience','Skills','Contact'].map(sec => (

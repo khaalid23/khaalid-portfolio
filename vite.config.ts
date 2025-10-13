@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
@@ -13,3 +14,9 @@ export default defineConfig({
     },
   },
 })
+=======
+/* This file was moved to backup/original-frontend/vite.config.ts
+   The project now uses the Vite config under client/vite.config.ts
+*/
+export default {}
+>>>>>>> 05bc7f5 (modevi the client)

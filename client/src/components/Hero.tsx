@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-
+// Hero section with animated text and button
 const Hero = () => {
   const scrollToWork = () => {
     const workSection = document.getElementById('work');
@@ -7,7 +7,6 @@ const Hero = () => {
       workSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
   return (
     <section className="relative flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white overflow-hidden">
       <div className="absolute inset-0 z-0">

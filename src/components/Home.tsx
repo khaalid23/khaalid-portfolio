@@ -1,7 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
+import type { Engine } from 'tsparticles-engine';
 
 export default function Hero() {
   useEffect(() => {
@@ -21,32 +22,17 @@ export default function Hero() {
     return () => document.removeEventListener('click', handler);
   }, []);
 
+  const particlesInit = useCallback(async (engine: Engine) => {
+    await loadFull(engine);
+  }, []);
+
   return (
     <div className="relative h-screen flex flex-col justify-center items-center text-center px-4 overflow-hidden" data-aos="fade-up">
       <Particles
         id="tsparticles"
+        init={particlesInit}
+        url="/particles.json"
         className="absolute inset-0 -z-10"
-        init={async (engine) => {
-          await loadFull(engine);
-        }}
-        options={{
-          background: { color: { value: "transparent" } },
-          fpsLimit: 60,
-          interactivity: {
-            events: { onHover: { enable: true, mode: 'repulse' }, resize: true },
-            modes: { repulse: { distance: 100, duration: 0.4 } },
-          },
-          particles: {
-            color: { value: '#ffffff' },
-            links: { enable: true, color: '#a5b4fc', distance: 150, opacity: 0.3, width: 1 },
-            move: { enable: true, speed: 1, outModes: { default: 'bounce' } },
-            number: { value: 60, density: { enable: true, area: 800 } },
-            opacity: { value: 0.5 },
-            shape: { type: 'circle' },
-            size: { value: { min: 1, max: 3 } },
-          },
-          detectRetina: true,
-        }}
       />
       <img
         src="/me.jpg"

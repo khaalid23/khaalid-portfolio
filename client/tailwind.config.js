@@ -8,7 +8,7 @@ export default {
     extend: {
       colors: {
         'brand': '#322D8C',
-      },
+      }
     },
   },
   plugins: [],

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && npx vite build",
     "preview": "vite preview",
     "server": "ts-node-dev --respawn --transpile-only server/index.ts",
     "dev:all": "concurrently -k -n FRONTEND,SERVER -c cyan,magenta \"vite\" \"npm:server\"",

@@ -14,7 +14,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900 to-transparent"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
       </div>
-      <div className="relative z-10 flex flex-col items-center text-center px-4">
+      <div className="relative z-10 flex flex-col items-center text-center px-5">
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
